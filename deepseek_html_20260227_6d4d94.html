@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>التربية والتعليم - البوابة الجزائرية</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="icons/icon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- هيدر موحد -->
+  <header> ... (نفس الكود) ... </header>
+
+  <!-- مسار التنقل (Breadcrumb) -->
+  <div class="breadcrumb">
+    <a href="index.html">الرئيسية</a> / <span>التربية والتعليم</span>
+  </div>
+
+  <div class="page-container">
+    <!-- الشريط الجانبي -->
+    <aside class="sidebar">
+      <h3>قطاعات أخرى</h3>
+      <ul>
+        <li><a href="payment.html"><i class="fas fa-credit-card"></i> الدفع الإلكتروني</a></li>
+        <li><a href="post.html"><i class="fas fa-envelope"></i> بريد الجزائر</a></li>
+        <li><a href="education.html" class="active"><i class="fas fa-graduation-cap"></i> التربية والتعليم</a></li>
+        <li><a href="university.html"><i class="fas fa-university"></i> الخدمات الجامعية</a></li>
+        <!-- ... -->
+      </ul>
+    </aside>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="content">
+      <h2 class="page-title"><i class="fas fa-graduation-cap"></i> التربية والتعليم</h2>
+      
+      <!-- مجموعة: فضاء الأستاذ -->
+      <div class="service-group">
+        <div class="group-header" onclick="toggleGroup(this)">
+          <span><i class="fas fa-chalkboard-teacher"></i> فضاء الأستاذ</span>
+          <i class="fas fa-chevron-down toggle-icon"></i>
+        </div>
+        <div class="group-content">
+          <div class="service-item">
+            <a href="https://ostad.education.dz/auth" target="_blank" rel="noopener">المنصة الرقمية <i class="fas fa-external-link-alt"></i></a>
+            <span class="service-desc">الدخول إلى فضاء الأستاذ</span>
+          </div>
+          <div class="service-item">
+            <a href="https://taqiim.education.dz/" target="_blank" rel="noopener">تقييم المكتسبات</a>
+          </div>
+          <div class="service-item">
+            <a href="https://tawdif.education.dz/" target="_blank">توظيف الأساتذة المتعاقدين</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- مجموعة: فضاء الأولياء والتلاميذ -->
+      <div class="service-group">
+        <div class="group-header" onclick="toggleGroup(this)">
+          <span><i class="fas fa-users"></i> فضاء الأولياء والتلميذ</span>
+          <i class="fas fa-chevron-down toggle-icon"></i>
+        </div>
+        <div class="group-content">
+          <div class="service-item">
+            <a href="https://awlyaa.education.dz/login" target="_blank">فضاء أولياء التلاميذ</a>
+          </div>
+          <div class="service-item">
+            <a href="https://www.dzexams.com/" target="_blank">تحضير الفروض والاختبارات</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- مجموعة: الامتحانات الوطنية -->
+      <div class="service-group">
+        <div class="group-header" onclick="toggleGroup(this)">
+          <span><i class="fas fa-file-alt"></i> الامتحانات الوطنية</span>
+          <i class="fas fa-chevron-down toggle-icon"></i>
+        </div>
+        <div class="group-content">
+          <div class="service-item">
+            <a href="https://bem.onec.dz/" target="_blank">نتائج شهادة التعليم المتوسط (BEM)</a>
+          </div>
+          <div class="service-item">
+            <a href="https://bac.onec.dz/" target="_blank">نتائج شهادة البكالوريا (BAC)</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- معلومات الاتصال الخاصة بالقطاع -->
+      <div class="contact-info">
+        <p><i class="fas fa-globe"></i> <a href="https://www.education.gov.dz/" target="_blank">الموقع الرسمي لوزارة التربية</a></p>
+        <p><i class="fas fa-phone"></i> <a href="tel:+21323527227">+213 23 52 72 27</a></p>
+      </div>
+    </main>
+  </div>
+
+  <!-- الفوتر -->
+  <footer> ... </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // دالة بسيطة لفتح/غلق المجموعات
+    function toggleGroup(header) {
+      const content = header.nextElementSibling;
+      const icon = header.querySelector('.toggle-icon');
+      if (content.style.display === 'none' || content.style.display === '') {
+        content.style.display = 'block';
+        icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+      } else {
+        content.style.display = 'none';
+        icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+      }
+    }
+    // افتح المجموعة الأولى افتراضيًا
+    document.querySelectorAll('.service-group .group-content').forEach((el, idx) => {
+      if (idx === 0) el.style.display = 'block';
+      else el.style.display = 'none';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>البوابة الجزائرية للخدمات الرقمية</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="icons/icon.png" type="image/png">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- الأنماط المخصصة -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- الهيدر الثابت -->
+  <header>
+    <div class="branding">
+      <img src="icons/icon.png" alt="شعار البوابة" class="logo">
+      <h1>البوابة الجزائرية للخدمات الرقمية</h1>
+      <button id="darkModeToggle" aria-label="الوضع الليلي"><i class="fas fa-moon"></i></button>
+    </div>
+    <div class="search-area">
+      <input type="text" id="searchInput" placeholder="ابحث عن خدمة أو قطاع...">
+    </div>
+    <div class="weather-widget" id="weatherBox">
+      <img id="weatherIcon" src="" alt="أيقونة الطقس">
+      <span id="weatherInfo">--</span>
+      <button id="refreshWeather"><i class="fas fa-sync"></i></button>
+    </div>
+    <!-- شريط الأخبار -->
+    <div class="news-ticker">
+      <div class="ticker-content">
+        آخر التحديثات: إطلاق بوابة جزائرية موحدة | أشكي – منصة جديدة لتقديم الشكاوى | ...
+      </div>
+    </div>
+  </header>
+
+  <!-- المحتوى الرئيسي -->
+  <main>
+    <!-- قسم الترحيب -->
+    <section class="hero">
+      <div class="hero-content">
+        <img src="icons/icon.png" alt="شعار" class="hero-logo">
+        <h2>أهلاً بكم في البوابة الجزائرية للخدمات الرقمية</h2>
+        <p>منصة إلكترونية وطنية موحّدة تجمع كل الخدمات الحكومية في مكان واحد، بسهولة وأمان.</p>
+        <a href="#sectors" class="cta-button">استكشف الخدمات</a>
+      </div>
+    </section>
+
+    <!-- إحصائيات سريعة -->
+    <div class="stats">
+      <div class="stat-item"><i class="fas fa-folder-open"></i> <span>30+</span> قطاع</div>
+      <div class="stat-item"><i class="fas fa-laptop"></i> <span>280+</span> خدمة</div>
+      <div class="stat-item"><i class="fas fa-shield-alt"></i> <span>آمنة</span> وموثوقة</div>
+    </div>
+
+    <!-- بطاقات القطاعات -->
+    <section id="sectors" class="sectors-grid">
+      <h2 class="section-title">القطاعات الرئيسية</h2>
+      <div class="grid-container">
+        <!-- بطاقة: الدفع الإلكتروني -->
+        <div class="sector-card" onclick="location.href='payment.html';">
+          <i class="fas fa-credit-card card-icon"></i>
+          <h3>الدفع الإلكتروني</h3>
+          <p>تسديد فواتير الكهرباء، الماء، الغاز، والكراء.</p>
+          <span class="card-link">عرض الخدمات →</span>
+        </div>
+        <!-- بطاقة: بريد الجزائر -->
+        <div class="sector-card" onclick="location.href='post.html';">
+          <i class="fas fa-envelope card-icon"></i>
+          <h3>بريد الجزائر</h3>
+          <p>الخدمات البريدية، الحسابات CCP، البطاقة الذهبية.</p>
+          <span class="card-link">عرض الخدمات →</span>
+        </div>
+        <!-- بطاقة: التربية والتعليم -->
+        <div class="sector-card" onclick="location.href='education.html';">
+          <i class="fas fa-graduation-cap card-icon"></i>
+          <h3>التربية والتعليم</h3>
+          <p>فضاء الأستاذ، الأولياء، نتائج الامتحانات.</p>
+          <span class="card-link">عرض الخدمات →</span>
+        </div>
+        <!-- بطاقة: الخدمات الجامعية -->
+        <div class="sector-card" onclick="location.href='university.html';">
+          <i class="fas fa-university card-icon"></i>
+          <h3>الخدمات الجامعية</h3>
+          <p>التسجيلات، منصة Progres، الإيواء.</p>
+          <span class="card-link">عرض الخدمات →</span>
+        </div>
+        <!-- أضف باقي القطاعات بنفس النمط -->
+        <div class="sector-card" onclick="location.href='aadl.html';">
+          <i class="fas fa-home card-icon"></i>
+          <h3>وكالة عدل</h3>
+          <p>دفع الكراء، متابعة طلبات السكن.</p>
+          <span class="card-link">عرض الخدمات →</span>
+        </div>
+        <div class="sector-card" onclick="location.href='insurance.html';">
+          <i class="fas fa-shield-alt card-icon"></i>
+          <h3>التأمينات</h3>
+          <p>وكالات التأمين، خدمات إلكترونية.</p>
+          <span class="card-link">عرض الخدمات →</span>
+        </div>
+        <!-- ... وهكذا لباقي القطاعات ... -->
+      </div>
+    </section>
+
+    <!-- قسم تقييم الصفحة -->
+    <section class="rating">
+      <h3>قيّم هذه الصفحة</h3>
+      <a href="https://forms.gle/..." target="_blank" class="rating-btn"><i class="fas fa-star"></i> اضغط لتقييمك</a>
+    </section>
+  </main>
+
+  <!-- الفوتر -->
+  <footer>
+    <p>© 2025 البوابة الجزائرية للخدمات الرقمية</p>
+    <p>❀ لا تنسونا من صالح دعائكم ❀</p>
+  </footer>
+
+  <!-- زر العودة للأعلى -->
+  <button id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'});">↑</button>
+
+  <!-- السكربتات -->
+  <script src="js/main.js"></script>
+</body>
+</html>
