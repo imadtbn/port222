@@ -1,126 +1,1058 @@
 <!DOCTYPE html>
 <html dir="rtl" lang="ar">
+
 <head>
+
   <meta charset="UTF-8">
   <title>البوابة الجزائرية للخدمات الرقمية</title>
+
+  <!-- ضبط العرض للهواتف -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- أيقونة الموقع -->
   <link rel="icon" href="icons/icon.png" type="image/png">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- الأنماط المخصصة -->
+  <link rel="icon" href="https://imadtbn.github.io/dz_portal/icons/icon.png" type="image/png">
+
+  <!-- ألوان للمتصفحات -->
+  <meta name="theme-color" content="#006233">
+
+  <!-- الأنماط css -->
   <link rel="stylesheet" href="css/style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- تسجيل Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./service-worker.js')
+        .then(reg => console.log('✅ Service Worker registered:', reg.scope))
+        .catch(err => console.error('❌ Service Worker failed:', err));
+    }
+  </script>
+
+  <!-- تحسين SEO احترافي -->
+  <link rel="canonical" href="https://imadtbn.github.io/dz_portal/">
+  <meta property="og:locale" content="ar_DZ">
+  <meta property="og:site_name" content="البوابة الجزائرية للخدمات الرقمية">
+
+  <!-- تحسين الأمان -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+
+  <!-- Microsoft Tiles -->
+  <meta name="msapplication-TileColor" content="#006233">
+  <meta name="msapplication-TileImage" content="icons/icon.png">
+  <meta name="msapplication-config" content="browserconfig.xml">
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" href="icons/icon.png">
+  <meta name="apple-mobile-web-app-title" content="البوابة الجزائرية للخدمات الرقمية">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- تحسين الاتصال المسبق بالخوادم الخارجية -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="preconnect" href="https://www.clarity.ms" crossorigin>
+
+  <!-- Google Analytics -->
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-K23WYKK60X"></script>
+  <script defer>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-K23WYKK60X');
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script defer>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.defer = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NW3BWPF6');
+  </script>
+
+  <!-- Microsoft Clarity -->
+  <script defer>
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r);
+      t.defer = 1;
+      t.src = "https://www.clarity.ms/tag/" + i + "?ref=bwt";
+      y = l.getElementsByTagName(r)[0];
+      y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "tjk39ubxx1");
+  </script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://imadtbn.github.io/dz_portal/#website",
+      "url": "https://imadtbn.github.io/dz_portal/",
+      "name": "البوابة الجزائرية للخدمات الرقمية",
+      "alternateName": "DZ e-Services Portal",
+      "inLanguage": "ar",
+      "description": "موقع موحد يضم روابط إلى جميع الخدمات الإلكترونية الحكومية الجزائرية.",
+      "image": "https://imadtbn.github.io/dz_portal/preview.png",
+      "logo": "https://imadtbn.github.io/dz_portal/icons/icon.png",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://imadtbn.github.io/dz_portal/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "GovernmentOrganization",
+      "@id": "https://imadtbn.github.io/dz_portal/#organization",
+      "name": "البوابة الجزائرية للخدمات الرقمية",
+      "url": "https://imadtbn.github.io/dz_portal/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://imadtbn.github.io/dz_portal/icons/icon.png"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "areaServed": "DZ",
+        "availableLanguage": ["ar", "fr"]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "الجزائر",
+        "postalCode": "16000",
+        "addressCountry": "DZ"
+      },
+      "sameAs": [
+        "https://imadtbn.github.io/dz_portal/"
+      ]
+    }
+  ]
+}
+    {
+      "@type": "WebPage",
+      "@id": "https://imadtbn.github.io/dz_portal/#webpage",
+      "url": "https://imadtbn.github.io/dz_portal/",
+      "name": "الصفحة الرئيسية",
+      "isPartOf": { "@id": "https://imadtbn.github.io/dz_portal/#website" },
+      "about": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+      "inLanguage": "ar",
+      "image": "https://imadtbn.github.io/dz_portal/preview.png"
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://imadtbn.github.io/dz_portal/#navigation",
+      "name": "قائمة التنقل في البوابة الجزائرية للخدمات الإلكترونية",
+      "description": "قائمة أقسام وخدمات البوابة الجزائرية للخدمات الإلكترونية",
+      "itemListElement": [
+        { "@type": "SiteNavigationElement", "position": 1, "name": "الدفع الإلكتروني", "url": "#toggle-payment" },
+        { "@type": "SiteNavigationElement", "position": 2, "name": "تعبئة الهاتف النقال", "url": "#toggle-recharge" },
+
+        { "@type": "SiteNavigationElement", "position": 2, "name": "موبيليس", "url": "#toggle-recharge" },
+        { "@type": "SiteNavigationElement", "position": 2, "name": "جازي, "url": "#toggle-recharge" },
+        { "@type": "SiteNavigationElement", "position": 2, "name": "أوريدو", "url": "#toggle-recharge" },
+
+        { "@type": "SiteNavigationElement", "position": 3, "name": "بريد الجزائر", "url": "#toggle-post" },
+        { "@type": "SiteNavigationElement", "position": 4, "name": "اتصالات الجزائر", "url": "#toggle-telecom" },
+        
+        { "@type": "SiteNavigationElement", "position": 5, "name": "التربية والتعليم", "url": "#toggle-education" },
+        { "@type": "SiteNavigationElement", "position": 5, "name": "منصة الأستاذ", "url": "#toggle-education" },
+        { "@type": "SiteNavigationElement", "position": 5, "name": "فضاء الأولياء", "url": "#toggle-education" },
+        { "@type": "SiteNavigationElement", "position": 5, "name": "التمارين والفروض", "url": "#toggle-education" },
+
+        { "@type": "SiteNavigationElement", "position": 6, "name": "بنك الفروض والاختبارات لجميع المستويات التعليمية", "url": "#toggle-education-bank" },
+
+        
+        { "@type": "SiteNavigationElement", "position": 6, "name": "الخدمات الجامعية", "url": "#toggle-university" },
+        { "@type": "SiteNavigationElement", "position": 7, "name": "التكوين المهني", "url": "#toggle-vocational" },
+        { "@type": "SiteNavigationElement", "position": 8, "name": "الإدارة المحلية", "url": "#toggle-admin" },
+        { "@type": "SiteNavigationElement", "position": 8, "name": "قفة رمضان", "url": "#toggle-admin" },
+        { "@type": "SiteNavigationElement", "position": 8, "name": "منحة رمضان", "url": "#toggle-admin" },
+        { "@type": "SiteNavigationElement", "position": 9, "name": "الوكالة الوطنية لتحسين السكن و تطويره aadl", "url": "#toggle-aadl3" },
+        { "@type": "SiteNavigationElement", "position": 10, "name": "المؤسسة الوطنية للترقية العقارية ENPI", "url": "#toggle-enpi" },
+
+        { "@type": "SiteNavigationElement", "position": 10, "name": "lpp", "url": "#toggle-enpi" },
+        { "@type": "SiteNavigationElement", "position": 10, "name": " lpl", "url": "#toggle-enpi" },
+
+        { "@type": "SiteNavigationElement", "position": 11, "name": "الخدمات الجبائية", "url": "#toggle-tax" },
+        { "@type": "SiteNavigationElement", "position": 12, "name": "الصفقات العمومية", "url": "#toggle-tenders" },
+        { "@type": "SiteNavigationElement", "position": 13, "name": "الأملاك الوطنية والعقار", "url": "#toggle-realestate" },
+        { "@type": "SiteNavigationElement", "position": 14, "name": "وزارة الشؤون الخارجية", "url": "#toggle-foreign" },
+        { "@type": "SiteNavigationElement", "position": 15, "name": "الضمان الاجتماعي", "url": "#social-security" },
+
+        { "@type": "SiteNavigationElement", "position": 14, "name": "CNAS", "url": "#social-security" },
+        { "@type": "SiteNavigationElement", "position": 14, "name": "casnos", "url": "#social-security" },
+        { "@type": "SiteNavigationElement", "position": 14, "name": "CNR", "url": "#social-security" },
+
+        { "@type": "SiteNavigationElement", "position": 16, "name": "العدالة", "url": "#toggle-justice" },
+        { "@type": "SiteNavigationElement", "position": 17, "name": "المحروقات والمناجم", "url": "#toggle-energy" },
+        { "@type": "SiteNavigationElement", "position": 18, "name": "النقل", "url": "#toggle-transport" },
+        { "@type": "SiteNavigationElement", "position": 19, "name": "التشغيل", "url": "#toggle-employment" },
+        { "@type": "SiteNavigationElement", "position": 20, "name": "الصحة", "url": "#toggle-health" },
+        { "@type": "SiteNavigationElement", "position": 21, "name": "التجارة", "url": "#toggle-commerce" },
+        { "@type": "SiteNavigationElement", "position": 22, "name": "الجمارك الجزائرية", "url": "#toggle-customs" },
+        { "@type": "SiteNavigationElement", "position": 23, "name": "الوكالة الوطنية للمقاول الذاتي", "url": "#toggle-autoentrepreneur" },
+        { "@type": "SiteNavigationElement", "position": 24, "name": "الديوان الوطني للحج والعمرة", "url": "#toggle-onpo" },
+        { "@type": "SiteNavigationElement", "position": 25, "name": "الوكالة الوطنية لترقية الإستثمار", "url": "#toggle-investment" },
+        { "@type": "SiteNavigationElement", "position": 26, "name": "السلطة الوطنية المستقلة للانتخابات", "url": "#toggle-electionsdz" },
+        { "@type": "SiteNavigationElement", "position": 27, "name": "المديرية العامة للأمن الوطني", "url": "#toggle-dgsn" },
+        { "@type": "SiteNavigationElement", "position": 28, "name": "سلطة ضبط البريد والاتصالات الالكترونية", "url": "#toggle-arpce" },
+        { "@type": "SiteNavigationElement", "position": 29, "name": "وكالات التأمينات", "url": "#toggle-insurance" },
+        { "@type": "SiteNavigationElement", "position": 30, "name": "خدمات بنكية", "url": "#toggle-banks" },
+        { "@type": "SiteNavigationElement", "position": 31, "name": "أرقام الطوارئ والخدمات", "url": "#toggle-emergency" },
+        { "@type": "SiteNavigationElement", "position": 32, "name": "معلومات الإتصال", "url": "#toggle-contact" },
+        { "@type": "SiteNavigationElement", "position": 33, "name": "التعليقات والإستفسارات", "url": "#toggle-comments" }
+      ]
+    }
+  ]
+}
+</script>
+
+  <!-- الوصف الرسمي لمحركات البحث -->
+  <meta name="description" content="البوابة الجزائرية للخدمات الرقمية توفر خدمات متنوعة للمستخدمين بسهولة واحترافية.">
+
+  <!-- كلمات مفتاحية طويلة وشاملة للأرشفة -->
+  <meta name="keywords"
+    content="الخدمات الإلكترونية الجزائرية, البوابة الجزائرية للخدمات الرقمية, الحكومة الإلكترونية, الإدارة الإلكترونية, رقمنة الخدمات, بريد الجزائر, منحة رمضان, قفة رمضان, التسجيل في فقة رمضان, تسجيل فقة رمضان, طلب قفة  رمضان, البطاقة الذهبية, BaridiMob, CCP, الطرود البريدية, اتصالات الجزائر, Algerie Telecom, My Idoom, Idoom 4G LTE, تعبئة الانترنت, الدفع الإلكتروني, موبيليس, Mobilis, MobiSpace, جازي, Djezzy, أوريدو, Ooredoo, My Ooredoo, فواتير الكهرباء, سونلغاز, Sonelgaz, ADE الجزائرية للمياه, تطبيق Miyahimob, سيال SEAAL, AADL, OPGI, الدفع الإلكتروني عدل, وزارة التربية الوطنية, نتائج البكالوريا, نتائج BEM, تسجيلات البكالوريا, تسجيلات BEM, فضاء الأولياء, فضاء الأستاذ, منصة تقييم المكتسبات, ONEFD, التعليم عن بعد, شهادة إثبات المستوى, وزارة التعليم العالي, Progres, التسجيل الجامعي, التحويلات الجامعية, الإيواء الجامعي, تطبيق Progres, تطبيق MyBus, وزارة التكوين والتعليم المهنيين, التسجيل في التكوين, الامتحانات المهنية, takwin dz, وزارة الداخلية, شهادة الميلاد, شهادة الميلاد S12, شهادة الوفاة, عقد الزواج, بطاقة التعريف البيومترية, جواز السفر البيومتري, الشباك عن بعد, وزارة المالية, الطابع الجبائي, شراء الطابع, قسيمة السيارات, وزارة العدل, صحيفة السوابق العدلية, متابعة الملفات القضائية, وزارة السكن, السكن الاجتماعي, برامج عدل, البوابة العقارية, شهادة السلبية العقارية, الدفتر العقاري, CNAS, الضمان الاجتماعي, CASNOS, CNR, وزارة العمل, التشغيل, ANEM الوكالة الوطنية للتشغيل, منحة البطالة, وزارة الصحة, الخدمات الصحية الإلكترونية, حجز المواعيد الطبية, وزارة التجارة, التجارة الإلكترونية, سجل التجار, حماية المستهلك, وزارة الفلاحة, وزارة السياحة, البنوك الجزائرية, البنك المركزي الجزائري, BNA البنك الوطني الجزائري, BEA بنك الجزائر الخارجي, بنك الفلاحة, BADR, بنك التنمية المحلية, BDL, القرض الشعبي الجزائري, CPA, الصندوق الوطني للتوفير, CNEP, البنك الوطني للإسكان, BNH, بنك الخليج الجزائر, AGB, بنك البركة, بنك ABC, Natixis, Société Générale, Citibank, البنك العربي, HSBC, أرقام الطوارئ, الدرك الوطني, الشرطة, الحماية المدنية, حراس السواحل, ألو الشرطة, وسيط الجمهورية, حماية المستهلك, حماية الطفولة, محافظة الغابات, خدماتي, تصليح الأجهزة, تواصل, اتصل بنا, دعم, مساعدة, الجزائر, الخدمات الرقمية, خدمات حكومية, خدمات إلكترونية, معاملات إدارية, دفع فواتير online, تسديد عبر الإنترنت, بوابة جزائرية, مواطن, موظف, طالب, متقاعد, تأمين, بنك, صحة, تعليم, نقل, سفر, طوارئ, استعلامات, معلومات, دليل, روابط, أرقام هواتف, تطبيقات جوال,  تطبيقات, Android, iOS, متجر تطبيقات, جوجل بلاي, App Store, دليل الخدمات, خدمات المواطن, الخدمات العامة, الخدمات المالية, الخدمات البريدية, الخدمات الهاتفية, الخدمات الصحية, الخدمات التعليمية, الخدمات القانونية, الخدمات الاجتماعية, الخدمات التجارية, الخدمات الجمركية, الخدمات النقلية, الخدمات الطارئة, الخدمات البنكية, الخدمات التأمينية, الخدمات العقارية, الخدمات الجبائية, الخدمات القضائية, الخدمات الإدارية, الخدمات المحلية, الخدمات الوطنية, الخدمات الدولية, بوابة, منصة, موقع, ويب, الإنترنت, شبكة, اتصال, معلومات, بيانات, تواصل, دعم فني, مساعدة, إرشادات, تعليمات, شروط, أحكام, سياسة الخصوصية, أسئلة شائعة, FAQ, اتصل بنا, تواصل معنا, اقتراحات, شكاوى, استفسارات, آراء, تعليقات, تقييم, مشاركة, نشر, وسائل التواصل الاجتماعي, فيسبوك, تويتر, انستغرام, يوتيوب, linkedin, واتساب, telegram, قنوات, مجموعات, منتديات, مدونات, مقالات, بنك الفروض والاختبارات,
+فروض واختبارات الجزائر, فروض مدرسية الجزائر, اختبارات مدرسية pdf, تحميل فروض واختبارات, بنك الفروض حسب المنهاج الجزائري, فروض التعليم الابتدائي, اختبارات التعليم الابتدائي, فروض السنة الأولى ابتدائي, فروض السنة الثانية ابتدائي, فروض السنة الثالثة ابتدائي, فروض السنة الرابعة ابتدائي, فروض السنة الخامسة ابتدائي, شهادة التعليم الابتدائي مواضيع وحلول, فروض التعليم المتوسط, اختبارات التعليم المتوسط, فروض السنة الأولى متوسط, فروض السنة الثانية متوسط, فروض السنة الثالثة متوسط, شهادة التعليم المتوسط bem, مواضيع bem مع الحل, فروض التعليم الثانوي, اختبارات التعليم الثانوي, فروض السنة الأولى ثانوي, فروض السنة الثانية ثانوي, فروض السنة الثالثة ثانوي, شهادة البكالوريا الجزائر, مواضيع بكالوريا مع الحل,  اختبارات الفصل الأول, اختبارات الفصل الثاني, اختبارات الفصل الثالث, فروض جاهزة للطباعة, مواضيع رسمية مع الحل النموذجي,
+لتحضير الفروض والاختبارات في الجزائر, dzexams, dzexam1, dzexam1.com, موقع فروض واختبارات الجزائر , بنك الفروض والاختبارات, فروض واختبارات الجزائر, فروض ابتدائي, فروض متوسط, فروض ثانوي, اختبارات مدرسية pdf, شهادة التعليم المتوسط, شهادة البكالوريا, dzexam, dzexam1 ">
+
+
+  <!-- Open Graph لمشاركة أفضل -->
+  <meta property="og:title" content="البوابة الجزائرية للخدمات الرقمية" />
+  <meta property="og:description" content="الخدمات الرقمية الجزائرية في مكان واحد." />
+  <meta property="og:image" content="https://imadtbn.github.io/dz_portal/icons/icon.png" />
+  <meta property="og:url" content="https://imadtbn.github.io/dz_portal/" />
+  <meta property="og:type" content="website" />
+
+  <!-- معلومات إضافية -->
+  <meta name="author" content="DZ Portal">
+  <meta name="robots" content="index, follow">
+
+  <!-- Google Search Console & Bing Verification -->
+  <meta name="google-site-verification" content="tGjdnUHs9yv4HTGpgnemjCK7YsJ3bI4twWC1WDi5Nqw">
+  <meta name="google-site-verification" content="f5Xi4oFx0v5dN6iPZd9qCw-7vnc3vIbAeYF9jr4vwVM">
+  <meta name="msvalidate.01" content="9BCA38377A234DCCEB9991EAD1A2F6C2">
+
+  <!-- أيقونات وملفات -->
+
+  <link rel="manifest" href="manifest.webmanifest.json">
+
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </noscript>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+    onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+  </noscript>
+
+  <link rel="preload" as="image" href="preview.png">
+
 </head>
+
 <body>
-  <!-- الهيدر الثابت -->
+
   <header>
-    <div class="branding">
-      <img src="icons/icon.png" alt="شعار البوابة" class="logo">
+    <div class="branding" dir="rtl">
+      <i class="fas fa-globe"></i>
       <h1>البوابة الجزائرية للخدمات الرقمية</h1>
-      <button id="darkModeToggle" aria-label="الوضع الليلي"><i class="fas fa-moon"></i></button>
+      <img alt="علم الجزائر" src="icons/Flag_of_Algeria.svg" alt="flag Logo" width="64" height="64" loading="lazy"
+        class="logo">
     </div>
-    <div class="search-area">
-      <input type="text" id="searchInput" placeholder="ابحث عن خدمة أو قطاع...">
+
+    <!-- 📦 قسم الطقس في الوسط -->
+    <div style="display:flex;justify-content:center;align-items:center;gap:10px;margin:5px 0;">
+
+      <!-- زر الإشعارات -->
+      <button id="notifyBtn" aria-label="إشعارات" style="border:none;background:#d40000;color:#fff;border-radius:6px;
+    padding:9px 12px;cursor:pointer;position:relative;">
+        <i class="fas fa-bell"></i>
+        <span id="notifyBadge" style="position:absolute;top:-4px;right:-4px;background:#ff0;
+        color:#000;padding:2px 6px;border-radius:50%;font-size:0.7em;display:none;">
+          1
+        </span>
+      </button>
+
+      <div id="notifyPanel" style="display:none;position:fixed;bottom:20px;left:20px;background:#fff;
+    padding:15px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,.2);
+    z-index:9999;max-width:280px;border:2px solid #d40000;">
+        <h4 style="margin:0 0 10px;color:#006233;">إشعار جديد</h4>
+        <p id="notifyText" style="margin:0;color:#333;"></p>
+      </div>
+
+      <!-- سكريبت خاص بالإشعارات -->
+      <script>
+        async function checkForNewServices() {
+          const notifyBtn = document.getElementById("notifyBtn");
+          const notifyBadge = document.getElementById("notifyBadge");
+          const notifyPanel = document.getElementById("notifyPanel");
+          const notifyText = document.getElementById("notifyText");
+
+          function showNotification(msg) {
+            notifyText.textContent = msg;
+            notifyBadge.style.display = "inline-block";
+          }
+
+          notifyBtn.addEventListener("click", () => {
+            notifyPanel.style.display =
+              notifyPanel.style.display === "none" ? "block" : "none";
+            notifyBadge.style.display = "none";
+          });
+
+          // جلب قائمة الخدمات الحالية
+          const response = await fetch("services.json");
+          const currentServices = await response.json();
+
+          // القائمة المحفوظة سابقًا
+          const saved = localStorage.getItem("servicesList");
+          const savedServices = saved ? JSON.parse(saved) : [];
+
+          // استخراج ID للخدمات
+          const savedIDs = savedServices.map(s => s.id);
+          const newServices = currentServices.filter(s => !savedIDs.includes(s.id));
+
+          if (newServices.length > 0) {
+            // يوجد خدمة جديدة
+            const latest = newServices[newServices.length - 1];
+            showNotification("تم إضافة خدمة جديدة: " + latest.title);
+          }
+
+          // حفظ النسخة الجديدة
+          localStorage.setItem("servicesList", JSON.stringify(currentServices));
+        }
+
+        // تشغيل النظام
+        checkForNewServices();
+      </script>
+
+      <!-- صندوق عرض الطقس -->
+      <div id="weatherBox" style="display:flex;align-items:center;gap:10px;background:#006400;
+    border:1px solid #ddd;border-radius:10px;padding:4px 12px;
+    max-width:350px;box-shadow:0 2px 6px rgba(0,0,0,.1);">
+        <img id="weatherIcon" src="" alt="أيقونة الطقس" loading="lazy" style="width:28px;height:28px;">
+        <span id="weatherInfo" style="flex:1;white-space:nowrap;">--</span>
+        <button id="refreshWeatherBtn" aria-label="تحديث بيانات الطقس" style="border:none;background:#006420;color:#fff;
+      border-radius:6px;padding:8px 10px;cursor:pointer;">
+          <i class="fas fa-sync"></i>
+        </button>
+      </div>
+
+      <!-- زر الوضع الليلي -->
+      <button id="darkModeToggle" aria-label="تبديل الوضع الليلي" style="border:none;background:#333;color:#fff;border-radius:6px;
+    padding:9px 12px;cursor:pointer;">
+        <i class="fas fa-moon"></i>
+      </button>
+
     </div>
-    <div class="weather-widget" id="weatherBox">
-      <img id="weatherIcon" src="" alt="أيقونة الطقس">
-      <span id="weatherInfo">--</span>
-      <button id="refreshWeather"><i class="fas fa-sync"></i></button>
-    </div>
-    <!-- شريط الأخبار -->
-    <div class="news-ticker">
-      <div class="ticker-content">
-        آخر التحديثات: إطلاق بوابة جزائرية موحدة | أشكي – منصة جديدة لتقديم الشكاوى | ...
+
+    <!-- البحث -->
+    <div id="searchArea">
+      <div id="searchBox" dir="rtl">
+        <input id="searchInput" placeholder="ابحث هنا داخل الصفحة..." type="text">
       </div>
     </div>
+
+    <!-- شريط الأخبار -->
+    <div dir="rtl" id="newsBar">
+      <div id="newsTickerContainer">
+        <div id="newsTicker">
+          <!-- سيتم ملؤه بواسطة JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const ticker = document.getElementById('newsTicker');
+        if (ticker) {
+          // استخدم النص من المتغير العام newsTickerText، أو نص افتراضي إذا لم يوجد
+          ticker.textContent = window.newsTickerText || '🆕 آخر التحديثات: البوابة الجزائرية للخدمات الرقمية';
+        }
+      });
+    </script>
+
   </header>
 
-  <!-- المحتوى الرئيسي -->
-  <main>
-    <!-- قسم الترحيب -->
-    <section class="hero">
-      <div class="hero-content">
-        <img src="icons/icon.png" alt="شعار" class="hero-logo">
-        <h2>أهلاً بكم في البوابة الجزائرية للخدمات الرقمية</h2>
-        <p>منصة إلكترونية وطنية موحّدة تجمع كل الخدمات الحكومية في مكان واحد، بسهولة وأمان.</p>
-        <a href="#sectors" class="cta-button">استكشف الخدمات</a>
-      </div>
-    </section>
+  <!-- قسم الترحيب  -->
+  <section class="welcome-section">
+    <div class="welcome-content">
+      <!-- شعار البوابة -->
+      <img src="icons/icon.png" alt="أيقونة البوابة" width="120" height="120" fetchpriority="high" class="welcome-logo">
 
-    <!-- إحصائيات سريعة -->
-    <div class="stats">
-      <div class="stat-item"><i class="fas fa-folder-open"></i> <span>30+</span> قطاع</div>
-      <div class="stat-item"><i class="fas fa-laptop"></i> <span>280+</span> خدمة</div>
-      <div class="stat-item"><i class="fas fa-shield-alt"></i> <span>آمنة</span> وموثوقة</div>
+      <!-- عنوان الترحيب -->
+      <p class="welcome-title">أهلا بكم في البوابة الجزائرية للخدمات الرقمية</p>
+
+      <!-- الوصف الرئيسي -->
+      <p class="welcome-description">
+        <strong>البوابة الجزائرية للخدمات الرقمية</strong> هي <strong>منصة إلكترونية وطنية موحّدة</strong>،
+        تهدف إلى تمكين <strong>المواطنين الجزائريين</strong> من
+        <strong>الوصول السريع والآمن</strong> إلى مختلف
+        <strong>الخدمات الحكومية والعمومية</strong> عبر الإنترنت
+        من <strong>مكان واحد</strong>، دون تعقيد أو تنقّل إداري.
+        <br><br>
+
+        تجمع البوابة عدد من <strong>الروابط والخدمات الرقمية الرسمية</strong>
+        المصنّفة حسب <strong>القطاعات الحيوية</strong>، مما يساهم في
+        <strong>توفير الوقت والجهد</strong>، وتحسين
+        <strong>تجربة المستخدم</strong>، ودعم
+        <strong>التحول الرقمي للإدارة الجزائرية</strong>.
+        <br><br>
+
+        تم تصميم البوابة بواجهة <strong>بسيطة ومتجاوبة</strong>،
+        وتعمل <strong>بدون تسجيل أو إدخال بيانات شخصية</strong>،
+        لتكون <strong>دليلك الرقمي الذكي</strong> نحو
+        <strong>الخدمات الرسمية</strong> بكل سهولة وثقة.
+      </p>
+
+      <!-- Call To Action -->
+      <div class="welcome-cta" style="text-align:center; margin-top:20px;">
+        <a href="#services" class="lightning" style="display:inline-block; padding:12px 24px; border-radius:10px;
+            font-weight:bold; font-size:1.05em;">
+          🚀 استكشف الخدمات الرقمية الآن
+        </a>
+      </div>
+
+      <!-- زر تثبيت التطبيق -->
+      <button id="install-button">
+        <i class="fas fa-download"></i> تثبيت التطبيـق
+      </button>
+
+      <!-- زر المشاركة -->
+      <button onclick="sharePage()" class="share-button">
+        <i class="fas fa-share-alt" style="margin-left: 5px;"></i> شـارك البوابـة
+      </button>
+
+      <!-- زر المزيد -->
+      <a href="pages/guide.html" class="more-btn">
+        <i class="fas fa-book-open"></i> المزيد..
+      </a>
+
+      <!-- شريط الأيقونات التنقل الديناميكي -->
+      <script>
+
+        function createNavigationBar() {
+          const navContainer = document.querySelector('.nav-scroller-inner');
+
+          const sections = [
+            { url: 'payment.html', name: 'الدفع الإلكتروني', icon: 'fa-credit-card' },
+            { url: 'education.html', name: 'التعليم', icon: 'fa-graduation-cap' },
+            { url: 'health.html', name: 'الصحة', icon: 'fa-hospital' }
+          ];
+
+          sections.forEach(section => {
+            const link = document.createElement('a');
+            link.href = section.url;
+            link.className = 'nav-item';
+
+            link.innerHTML = `
+      <i class="fas ${section.icon}"></i>
+      <span>${section.name}</span>
+    `;
+
+            navContainer.appendChild(link);
+          });
+        }
+
+        function createNavigationBar() {
+          const navContainer = document.querySelector('.nav-scroller-inner');
+          const sections = [
+            { id: 'toggle-payment', name: 'الدفع الإلكتروني', icon: 'fa-credit-card' },
+            { id: 'toggle-recharge', name: 'تعبئة الهاتف', icon: 'fa-money-check-alt' },
+            { id: 'toggle-post', name: 'بريد الجزائر', icon: 'fa-envelope' },
+            { id: 'toggle-telecom', name: 'اتصالات الجزائر', icon: 'fa-wifi' },
+            { id: 'toggle-education', name: 'التربية والتعليم', icon: 'fa-graduation-cap' },
+            { id: 'toggle-education', name: 'فروض وإختبارات', icon: 'fa-graduation-cap' },
+            { id: 'toggle-university', name: 'الخدمات الجامعية', icon: 'fa-university' },
+            { id: 'toggle-vocational', name: 'التكوين المهني', icon: 'fa-tools' },
+            { id: 'toggle-admin', name: 'الإدارة المحلية', icon: 'fa-building' },
+            { id: 'toggle-aadl3', name: 'وكالة عدل', icon: 'fa-home' },
+            { id: 'toggle-enpi', name: 'Enpi', icon: 'fa-building-circle-check' },
+            { id: 'toggle-tax', name: 'الخدمات الجبائية', icon: 'fa-file-invoice-dollar' },
+            { id: 'toggle-tenders', name: 'الصفقات العمومية', icon: 'fa-file-contract' },
+            { id: 'toggle-realestate', name: 'أملاك عقارية', icon: 'fa-home' },
+            { id: 'toggle-foreign', name: 'و-الشؤون الخارجية', icon: 'fa-flag' },
+            { id: 'social-security', name: 'الضمان الاجتماعي', icon: 'fa-shield-alt' },
+            { id: 'toggle-justice', name: 'العدالة', icon: 'fa-scale-balanced' },
+            { id: 'toggle-energy', name: 'الطاقة والمناجم', icon: 'fa-gas-pump' },
+            { id: 'toggle-transport', name: 'النقل', icon: 'fa-bus' },
+            { id: 'toggle-employment', name: 'التشغيل', icon: 'fa-briefcase' },
+            { id: 'toggle-health', name: 'الصحة', icon: 'fa-heartbeat' },
+            { id: 'toggle-commerce', name: 'التجارة', icon: 'fa-store' },
+            { id: 'toggle-customs', name: 'الجمارك الجزائرية', icon: 'fa-landmark' },
+            { id: 'toggle-autoentrepreneur', name: 'المقاول الذاتي', icon: 'fa-user-tie' },
+            { id: 'toggle-onpo', name: 'الحج والعمرة', icon: 'fa-kaaba' },
+            { id: 'toggle-investment', name: 'ترقية الإستثمار', icon: 'fa-chart-line' },
+            { id: 'toggle-investment', name: 'الإنتخابات الجزائرية', icon: 'fas fa-vote-yea' },
+            { id: 'toggle-dgsn', name: 'الشرطة الجزائرية', icon: 'fas fa-user-police' },
+            { id: 'toggle-investment', name: 'سلطة ضبط البريد والإتصالات', icon: 'fas fa-tower-broadcast' },
+            { id: 'toggle-banks', name: 'الخدمات البنكية', icon: 'fa-building-columns' },
+            { id: 'toggle-insurance', name: 'وكالات التأمينات', icon: 'fa-shield-alt' },
+            { id: 'toggle-emergency', name: 'أرقام الطوارئ', icon: 'fa-phone-volume' }
+          ];
+
+          // إنشاء الأزرار
+          sections.forEach(section => {
+            const navItem = document.createElement('div');
+            navItem.className = 'nav-item';
+            navItem.innerHTML = `
+        <a class="lightning nav-link" href="#${section.id}">
+          <i class="fas ${section.icon} nav-icon"></i>
+          <span>${section.name}</span>
+        </a>`;
+            navContainer.appendChild(navItem);
+          });
+
+          document.addEventListener('DOMContentLoaded', () => {
+            createNavigationBar();
+            const inner = document.querySelector('.nav-scroller-inner');
+            inner.innerHTML += inner.innerHTML; // تكرار العناصر لضمان دورة كاملة
+          });
+
+
+          // تفعيل التمرير السلس مع حساب ارتفاع الهيدر
+          navContainer.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function (e) {
+              e.preventDefault();
+              const targetId = this.getAttribute('href').substring(1);
+              const targetElement = document.getElementById(targetId);
+              if (targetElement) {
+                const header = document.querySelector('header') || document.querySelector('.site-header');
+                const headerOffset = header ? header.offsetHeight : 0;
+                const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                const offsetPosition = elementPosition - headerOffset;
+
+                window.scrollTo({
+                  top: offsetPosition,
+                  behavior: 'smooth'
+                });
+              }
+            });
+          });
+        }
+
+        document.addEventListener('DOMContentLoaded', createNavigationBar);
+      </script>
     </div>
 
-    <!-- بطاقات القطاعات -->
-    <section id="sectors" class="sectors-grid">
-      <h2 class="section-title">القطاعات الرئيسية</h2>
-      <div class="grid-container">
-        <!-- بطاقة: الدفع الإلكتروني -->
-        <div class="sector-card" onclick="location.href='payment.html';">
-          <i class="fas fa-credit-card card-icon"></i>
-          <h3>الدفع الإلكتروني</h3>
-          <p>تسديد فواتير الكهرباء، الماء، الغاز، والكراء.</p>
-          <span class="card-link">عرض الخدمات →</span>
-        </div>
-        <!-- بطاقة: بريد الجزائر -->
-        <div class="sector-card" onclick="location.href='post.html';">
-          <i class="fas fa-envelope card-icon"></i>
-          <h3>بريد الجزائر</h3>
-          <p>الخدمات البريدية، الحسابات CCP، البطاقة الذهبية.</p>
-          <span class="card-link">عرض الخدمات →</span>
-        </div>
-        <!-- بطاقة: التربية والتعليم -->
-        <div class="sector-card" onclick="location.href='education.html';">
-          <i class="fas fa-graduation-cap card-icon"></i>
-          <h3>التربية والتعليم</h3>
-          <p>فضاء الأستاذ، الأولياء، نتائج الامتحانات.</p>
-          <span class="card-link">عرض الخدمات →</span>
-        </div>
-        <!-- بطاقة: الخدمات الجامعية -->
-        <div class="sector-card" onclick="location.href='university.html';">
-          <i class="fas fa-university card-icon"></i>
-          <h3>الخدمات الجامعية</h3>
-          <p>التسجيلات، منصة Progres، الإيواء.</p>
-          <span class="card-link">عرض الخدمات →</span>
-        </div>
-        <!-- أضف باقي القطاعات بنفس النمط -->
-        <div class="sector-card" onclick="location.href='aadl.html';">
-          <i class="fas fa-home card-icon"></i>
-          <h3>وكالة عدل</h3>
-          <p>دفع الكراء، متابعة طلبات السكن.</p>
-          <span class="card-link">عرض الخدمات →</span>
-        </div>
-        <div class="sector-card" onclick="location.href='insurance.html';">
-          <i class="fas fa-shield-alt card-icon"></i>
-          <h3>التأمينات</h3>
-          <p>وكالات التأمين، خدمات إلكترونية.</p>
-          <span class="card-link">عرض الخدمات →</span>
-        </div>
-        <!-- ... وهكذا لباقي القطاعات ... -->
+    <!-- المميزات الأساسية -->
+    <div class="welcome-stats">
+      <div class="stat-box">
+        <i class="fas fa-folder-open stat-icon"></i>
+        <div class="stat-title">عدد الأقسام</div>
+        <div class="stat-value">30</div>
       </div>
-    </section>
+      <div class="stat-box">
+        <i class="fas fa-laptop stat-icon"></i>
+        <div class="stat-title">الخدمات الرقمية</div>
+        <div class="stat-value">280+</div>
+      </div>
+      <div class="stat-box">
+        <i class="fas fa-shield-alt stat-icon"></i>
+        <div class="stat-title">آمنة وموثوقة</div>
+        <div class="stat-value" style="font-size: 1em;">بيئة محمية</div>
+      </div>
+    </div>
 
-    <!-- قسم تقييم الصفحة -->
-    <section class="rating">
-      <h3>قيّم هذه الصفحة</h3>
-      <a href="https://forms.gle/..." target="_blank" class="rating-btn"><i class="fas fa-star"></i> اضغط لتقييمك</a>
-    </section>
-  </main>
+    <!-- شريط التنقل الديناميكي -->
+    <div class="nav-scroller">
+      <div class="nav-scroller-inner">
+        <!-- سيتم ملء هذا القسم ديناميكيًا بواسطة JavaScript -->
+      </div>
+    </div>
 
-  <!-- الفوتر -->
-  <footer>
-    <p>© 2025 البوابة الجزائرية للخدمات الرقمية</p>
-    <p>❀ لا تنسونا من صالح دعائكم ❀</p>
+    </div>
+  </section>
+
+  <!-- بطاقات القطاعات -->
+  <section id="sectors" class="sectors-grid">
+    <h2 class="section-title">القطاعات الرئيسية</h2>
+    <div class="grid-container">
+
+      <!-- بطاقة: الدفع الإلكتروني -->
+      <div class="sector-card" onclick="location.href='pages/payment.html';">
+
+        <div class="sector-icon">
+          <img src="icons/E-PAIEMENT.jpg" alt="الدفع الإلكتروني" loading="lazy">
+        </div>
+        <h3>تسديد الفواتير</h3>
+        <p>تسديد فواتير الكهرباء، الماء، الغاز، والكراء.</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: تعبئة الهاتف -->
+      <div class="sector-card" onclick="location.href='pages/flexy.html';">
+        <div class="sector-icon">
+          <img src="icons/flexy1.png" alt="تعبئة الهاتف" loading="lazy">
+        </div>
+        <h3>تعبئة الهاتف النقال</h3>
+        <p>تعبئة الهاتف، جازي، موبيليس و أوريدو، تطبيقات وأرقام، فاتورة</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: إتصالات الجزائر -->
+      <div class="sector-card" onclick="location.href='pages/algerielecomdz.html';">
+
+        <div class="sector-icon">
+          <img src="icons/algerietelecom.png" alt="إتصالات الجزائر" loading="lazy">
+        </div>
+
+        <h3>إتصالات الجزائر</h3>
+        <p>الدفع الإلكتروني، بطاقات التعبئة، تطبيقات، فضاء الزبون، فاتورة</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: بريد الجزائر -->
+      <div class="sector-card" onclick="location.href='pages/postdz.html';">
+        <div class="sector-icon">
+          <img src="icons/poste.png" alt="بريد الجزائر" loading="lazy">
+        </div>
+        <h3>بريد الجزائر</h3>
+        <p>الخدمات البريدية، الحسابات CCP، البطاقة الذهبية، فاتورة</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: الجزائرية للمياه -->
+      <div class="sector-card" onclick="location.href='pages/ade.html';">
+        <div class="sector-icon">
+          <img src="icons/ade.png" alt="ADE logo" loading="lazy">
+        </div>
+        <h3>الجزائرية للمياه</h3>
+        <p>فضاء الزبون، دفع الفواتير، محاكاة، تطبيق، فاتورة،...</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: سونلغاز -->
+      <div class="sector-card" onclick="location.href='pages/sonelgaz.html';">
+        <div class="sector-icon">
+          <img src="icons/sonelgaz.png" alt="sonelgaz logo" loading="lazy">
+        </div>
+        <h3>سونلغاز</h3>
+        <p>، رفع آلي، دفع الفواتير، محاكاة، تطبيق، تصفح الفاتورة، ...</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: سيال -->
+      <div class="sector-card" onclick="location.href='pages/seaal.html';">
+        <div class="sector-icon">
+          <img src="icons/seaal.webp" alt="seaal logo" loading="lazy">
+        </div>
+        <h3>سيال للتطهير</h3>
+        <p>فضاء الزبون، دفع الفواتير، محاكاة، تطبيق، فاتورة،...</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: التربية والتعليم -->
+      <div class="sector-card" onclick="location.href='pages/education.html';">
+        <div class="sector-icon">
+          <img src="icons/education.png" alt="التربية والتعليم" loading="lazy">
+        </div>
+        <h3>التربية والتعليم</h3>
+        <p>فضاء الأستاذ، الأولياء، نتائج الامتحانات.</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: فروض وإختبارات dz exam1 -->
+      <div class="sector-card" onclick="location.href='pages/dzexam1.html';">
+        <div class="sector-icon">
+          <img src="icons/dzexam.png" alt="dz exam1" loading="lazy">
+        </div>
+        <h3>الفروض والإختبارات على dz exam1</h3>
+        <p>فروض وإختبارات جميع الاطوار </p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: فروض وإختبارات dzexams -->
+      <div class="sector-card" onclick="location.href='pages/dzexams.html';">
+        <div class="sector-icon">
+          <img src="icons/dzexams.png" alt="dz dzexams" loading="lazy">
+        </div>
+        <h3>الفروض والإختبارات على dzexams</h3>
+        <p>فروض وإختبارات جميع الاطوار </p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: الخدمات الجامعية -->
+      <div class="sector-card" onclick="location.href='pages/universitydz.html';">
+
+        <div class="sector-icon">
+          <img src="icons/ESI.png" alt="الخدمات الجامعية" loading="lazy">
+        </div>
+
+        <h3>الخدمات الجامعية</h3>
+        <p>تسجيل، منصة Progres، الإيواء، تحويلا ، تطبيقات</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: التكوين والتعليم المهني -->
+      <div class="sector-card" onclick="location.href='pages/mvetdz.html';">
+        <div class="sector-icon">
+          <img src="icons/formation.png" alt="التكوين والتعليم المهني" loading="lazy">
+        </div>
+        <h3>التكوين والتعليم المهني</h3>
+        <p>التسجيلات عن بعد، تسجيل، إمتحانات مهنية</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: الإدارة المحلية -->
+      <div class="sector-card" onclick="location.href='pages/interieurdz.html';">
+        <div class="sector-icon">
+          <img src="icons/inteurier.png" alt="الإدارة المحلية" loading="lazy">
+        </div>
+        <h3>الإدارة المحلية ومصالح البلدية</h3>
+        <p>إستخراج الوثائق الإدارية، شهادة الميلاد، بطاقة التعريف البيوميترية، جواز سفر ..</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: وكالة عدل -->
+      <div class="sector-card" onclick="location.href='pages/aadl.html';">
+        <div class="sector-icon">
+          <img src="icons/AADL.png" alt="وكالة عدل" loading="lazy">
+        </div>
+        <h3>وكالة عدل</h3>
+        <p>دفع الكراء، متابعة طلبات السكن.</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: وكالة enpi -->
+      <div class="sector-card" onclick="location.href='pages/aadl.html';">
+        <div class="sector-icon">
+          <img src="icons/ENPI.png" alt="وكالة enpi" loading="lazy">
+        </div>
+        <h3>المؤسسة الوطنية لترقية العقعارية</h3>
+        <p>دفع الكراء، فاتورة،التسجيل لإقتناء سكن ترقوي LPP-LPA متابعة طلبات السكن.</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: الديوان الوطني للترقية العقارية -->
+      <div class="sector-card" onclick="location.href='pages/opgi.html';">
+        <div class="sector-icon">
+          <img src="icons/opgi.png" alt="الديوان الوطني للترقية العقارية" loading="lazy">
+        </div>
+        <h3>الديوان الترقية العقارية</h3>
+        <p>دفع الكراء، متابعة طلبات السكن، فاتورة opgi</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: الجباية الإليكترونية -->
+      <div class="sector-card" onclick="location.href='pages/mfdz.html';">
+        <div class="sector-icon">
+          <img src="icons/inpux.jpg" alt="الجباية الإليكترونية" loading="lazy">
+        </div>
+        <h3>جبائية إليكترونية</h3>
+        <p>إقتناء طابع جبائي، لبطاقة التعريف أو جواز سفر، قسيمة السيارات</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: الصفقات العمومية -->
+      <div class="sector-card" onclick="location.href='pages/dgdndz.html';">
+        <div class="sector-icon">
+          <img src="icons/finance.png" alt="الصفقات العمومية" loading="lazy">
+        </div>
+        <h3>الصفقات العمومية</h3>
+        <p>البوابة الإلكترونية للصفقات، صندوق ضمان الصفقات العمومية، محكاة صفقة...</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: أملاك عقارية -->
+      <div class="sector-card" onclick="location.href='pages/dgdndz.html';">
+        <div class="sector-icon">
+          <img src="icons/DGDN.png" alt="أملاك عقارية" loading="lazy">
+        </div>
+        <h3>الأملاك العقارية</h3>
+        <p>إستخراج وثائق عقارية، شهادة السلبية، والعقود المشهرة، طلب الدفتر العقاري...</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: وزارة الشؤون الخارجية -->
+      <div class="sector-card" onclick="location.href='pages/opgi.html';">
+        <div class="sector-icon">
+          <img src="icons/EXTERIEUR.webp" alt="الشؤون الخارجية" loading="lazy">
+        </div>
+        <h3> وزارة الشؤون الخارجية</h3>
+        <p>ترحيل الوثائق للتصديق، ممثليات دبلوماسية بالداخل والخارج</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: الضمان الإجتماعي -->
+      <div class="sector-card" onclick="location.href='pages/interieurdz.html';">
+        <div class="sector-icon">
+          <img src="icons/travail.png" alt="الضمان الإجتماعي" loading="lazy">
+        </div>
+        <h3> العمل والضمان الإجتماعي</h3>
+        <p>إستخراج شهادة الإنتساب أو عدم الإنتساب، طلب الإنتساب، تطبيق فضاء الهناء، التقاعد</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: وزارة العدل -->
+      <div class="sector-card" onclick="location.href='pages/mjustice.html';">
+        <div class="sector-icon">
+          <img src="icons/justis.png" alt="وزارة العدل" loading="lazy">
+        </div>
+        <h3> وزارة العدل</h3>
+        <p>إستخراج صحيفة السوابق العدلية، الجنسية، إيداع شكاوي وتتبع قضيتك، تطبيق العدالة</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: وزارة الطاقة والمحروقات -->
+      <div class="sector-card" onclick="location.href='pages/energe.html';">
+        <div class="sector-icon">
+          <img src="icons/energy.png" alt="الطاقة والمحروقات" loading="lazy">
+        </div>
+        <h3> وزارة الطاقة والمحروقات</h3>
+        <p>تصاريح الإستدراد، مركبتي dz، فحص المركبات، خلية الإستماع</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: النقل -->
+      <div class="sector-card" onclick="location.href='pages/transoprt.html';">
+        <div class="sector-icon">
+          <img src="icons/transport.svg" alt="النقل" loading="lazy">
+        </div>
+        <h3> النقل وحجز التذاكر</h3>
+        <p>تذاكر النقل الجوي، البحري، السكك الحديدية، تطبيقات مواقيت السفر</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: الوكالة الوطنية للتشغيل -->
+      <div class="sector-card" onclick="location.href='pages/anem.html';">
+        <div class="sector-icon">
+          <img src="icons/anem.png" alt="الوكالة الوطنية للتشغيل" loading="lazy">
+        </div>
+        <h3> الوكالة الوطنية للتشغيل</h3>
+        <p>التسجيل في منحة البطالة، عروض العمل، تمديد طلب عمل وتطبيقات</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: وزارة الصحة -->
+      <div class="sector-card" onclick="location.href='pages/santedz.html';">
+        <div class="sector-icon">
+          <img src="icons/sante.jpg" alt="الصحة" loading="lazy">
+        </div>
+        <h3> الصحة العمومية</h3>
+        <p>منصة التكوين في الشبه طبي، العيادة الرقمية وتطبيقات</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: وزارة التجارة -->
+      <div class="sector-card" onclick="location.href='pages/santedz.html';">
+        <div class="sector-icon">
+          <img src="icons/commerc.png" alt="التجارة" loading="lazy">
+        </div>
+        <h3>التجار وترقية الصادرات</h3>
+        <p>فضاء التصريح والدفع الإليكتروني، صندوق تسيير الصادرات، خلية الاصغاء</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: الجمارك الجزائرية -->
+      <div class="sector-card" onclick="location.href='pages/douanedz.html';">
+        <div class="sector-icon">
+          <img src="icons/douane.png" alt="الجمارك الجزائرية" loading="lazy">
+        </div>
+        <h3>الجمارك الجزائرية</h3>
+        <p>خلية الإستماع، المعلومة التعريفية الملزمة، تصاريح عن بعد</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: الوكالة الوطنية للمقاول الذاتي -->
+      <div class="sector-card" onclick="location.href='pages/anae-dz.html';">
+        <div class="sector-icon">
+          <img src="icons/econom.png" alt="الوكالة الوطنية للمقاول الذاتي" loading="lazy">
+        </div>
+        <h3> المقاول الذاتي</h3>
+        <p>التسجيل في الإستفادة من بطاقة المقاول الذاتي</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: ديوان الحج والعمرة -->
+      <div class="sector-card" onclick="location.href='pages/onpo-dz.html';">
+        <div class="sector-icon">
+          <img src="icons/onpo.png" alt="ديوان الحج والعمرة" loading="lazy">
+        </div>
+        <h3>ديوان الحج والعمرة</h3>
+        <p>التسجيل في قرعة الحج، بوابة الحج والعمرة وخدمات أخرى</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: الوكالة الوطنية للإستثمار -->
+      <div class="sector-card" onclick="location.href='pages/aapi.dz.html';">
+        <div class="sector-icon">
+          <img src="icons/aapi.png" alt="الوكالة الوطنية للإستثمار" loading="lazy">
+        </div>
+        <h3>الوكالة الوطنية للإستثمار</h3>
+        <p>التسجيل في الوكالة لترقية الإستثمار، طرح إنشغال، حامل مشروع</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: السلطة الوطنية المستقلة للإنتخابات -->
+      <div class="sector-card" onclick="location.href='pages/ina-elections.dz.html';">
+        <div class="sector-icon">
+          <img src="icons/education.png" alt="السلطة الوطنية المستقلة للإنتخابات" loading="lazy">
+        </div>
+        <h3>السلطة الوطنية المستقلة للإنتخابات</h3>
+        <p>التسجيل في القوائم الإنتخابية، طلب بطاقة الناخب، طلب تغيير العنوان أو تصحيح الإسم</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: الشرطة الجزائرية -->
+      <div class="sector-card" onclick="location.href='pages/dgsn.dz.html';">
+        <div class="sector-icon">
+          <img src="icons/dgsn.png" alt="الشرطة الجزائرية" loading="lazy">
+        </div>
+        <h3> الشرطة الجزائرية</h3>
+        <p>منصة التصريح بضياع وثائق، إدلاء بشهادة، دليل هاتفي وتطبيقات</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: سلطة ضبط البريد والإتصالات الإليكترونية -->
+      <div class="sector-card" onclick="location.href='pages/arpce.dz.html';">
+        <div class="sector-icon">
+          <img src="icons/arpce.png" alt="سلطة ضبط البريد" loading="lazy">
+        </div>
+        <h3>سلطة ضبط البريد والإتصالات الإليكترونية</h3>
+        <p>إستمارة طلب خدمة، دفع فاتورة، إيداع شكوى، تحقق من الرقم وتطبيقات</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: تامينات -->
+      <div class="sector-card" onclick="location.href='pages/insurance.html';">
+        <div class="sector-icon">
+          <img src="icons/asserance.jpg" alt="تامينات" loading="lazy">
+        </div>
+        <h3>التأمينات</h3>
+        <p>وكالات التأمين، خدمات إلكترونية.</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: بنوك -->
+      <div class="sector-card" onclick="location.href='pages/insurance.html';">
+        <div class="sector-icon">
+          <img src="icons/bank.png" alt="بنوك" loading="lazy">
+        </div>
+        <h3>مال وبنوك</h3>
+        <p>وكالات البنوك خدمات إلكترونية وتطبيقات</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+      <!-- بطاقة: أرقام الطوارئ -->
+      <div class="sector-card" onclick="location.href='pages/insurance.html';">
+        <div class="sector-icon">
+          <img src="icons/emergency.png" alt="أرقام الطوارئ" loading="lazy">
+        </div>
+        <h3>خدمات، النجدة والطوارئ</h3>
+        <p>أرقام خضراء في خدمتكم مع تطبيقات</p>
+        <span class="card-link">عرض الخدمات →</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- عنصر الإشعارات -->
+  <div id="notificationBox"
+    style="position: fixed; bottom: 20px; left: 20px; background: #006233; color: white; padding: 12px 16px; border-radius: 8px; display: none; box-shadow: 0 2px 6px rgba(0,0,0,0.3); z-index:9999;">
+    🔔 إشعار جديد
+  </div>
+
+  <!-- عداد الزيارات -->
+  <div style="text-align: center; font-family: Arial,
+  				 sans-serif; margin-top: 40px; direction: rtl;">
+    <div style="color: #006400; font-size: 40px; font-weight: bold;">
+      <span id="daily-visits">0</span>+
+    </div>
+    <div style="color: #444; font-size: 18px; margin-bottom: 30px;">
+      عدد الزيارات<br><small style="color: #777;">اليوم</small>
+    </div>
+
+    <div style="color: #006400; font-size: 36px; font-weight: bold;">
+      <span id="total-visits">0</span>+
+    </div>
+    <div style="color: #444; font-size: 18px;">
+      عدد الزيارات منذ جوان 2025<br>
+
+    </div>
+  </div>
+
+  <!-- ⭐ قسم تقييم الصفحة الحقيقي -->
+  <section id="rating-section" dir="rtl" style="text-align:center; margin:20px auto; max-width:600px;">
+    <h3 style="color:#006233;">قيّم هذه الصفحة</h3>
+    <p style="font-size:1rem; color:#333;">
+      نرحّب برأيك لتحسين خدماتنا الرقمية.
+    </p>
+    <a href="https://forms.gle/yfMJqhsD3XDn9NaJ7" target="_blank" style="display:inline-block; background:#a52a2a; color:#fff; padding:10px 20px;
+            border-radius:8px; text-decoration:none; font-weight:bold;">
+      <i class="fas fa-star"></i> إضغط هنا لتقديم تقييمك الحقيقي
+    </a>
+  </section>
+
+  <!-- 🔻 الفوتر  -->
+  <footer class="main-footer">
+
+    <div class="footer-container">
+
+      <!-- القسم الأول: التعريف بالبوابة -->
+      <div class="footer-col footer-about">
+        <div class="footer-logo">
+          <img src="icons/icon-192.png" alt="شعار البوابة الجزائرية">
+        </div>
+        <h3>البوابة الجزائرية للخدمات الرقمية</h3>
+        <p>
+          منصة وطنية موحّدة تتيح الوصول السريع والآمن إلى مختلف الخدمات الحكومية
+          والعمومية عبر الإنترنت من مكان واحد، بكل سهولة وثقة.
+        </p>
+      </div>
+
+      <!-- القسم الثاني: معلومات الاتصال -->
+      <div class="footer-col footer-contact">
+        <h3>معلومات الإتصال</h3>
+        <ul>
+          <li>البريد الإلكتروني: tabaniimadeddine@gmail.com</li>
+          <li>الجزائر</li>
+          <li>منصة رقمية وطنية مستقلة</li>
+        </ul>
+      </div>
+
+
+      <!-- القسم الثالث: روابط مهمة -->
+      <div class="footer-col footer-links">
+        <h3>روابط مهمة</h3>
+        <ul>
+          <li><a href="pages/about.html">عن الموقع</a></li>
+          <li><a href="pages/contact.html">اتصل بنا</a></li>
+          <li><a href="pages/privacy.html">سياسة الخصوصية</a></li>
+          <li><a href="pages/guide.html">الإرشادات</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- الشريط السفلي -->
+    <div class="footer-bottom">
+      <p>© 2026 البوابة الجزائرية للخدمات الرقمية</p>
+      <p>❀ لا تنسونا من صالح دعائكم ❀</p>
+    </div>
+
   </footer>
 
-  <!-- زر العودة للأعلى -->
-  <button id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'});">↑</button>
+  <!-- زر الرجوع للأعلى -->
+  <button id="scrollTopBtn" onclick="scrollToTop()" title="العودة للأعلى">↑
+  </button>
 
-  <!-- السكربتات -->
+  <!-- عام -->
   <script src="js/main.js"></script>
+
+  <!-- شريط الأخبار -->
+  <script src="js/news.js"></script>
+
 </body>
+
 </html>
